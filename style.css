@@ -1,0 +1,251 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: sans-serif;
+    margin: 0;
+}
+h1{font-size: 3.5em;}
+h2{font-size: 2.5em;}
+h3{font-size: 2em;}
+p{font-size: 1.5em;}
+
+button{
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 5px 30px;
+    border-radius: 10px;
+    border: 5px solid rgb(0, 128, 49);
+    box-shadow: 3px 3px 10px rgb(12, 241, 12);
+    color:rgb(233, 24, 24);
+    background-color: rgb(246, 248, 245);
+}
+button:hover{
+    background-color: blue;
+}
+.contenedor{
+    max-width: 1400px;
+    margin: auto;
+
+}
+header{
+    background-color: rgb(96, 248, 82);
+}
+.logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: rgb(246, 242, 247);
+    font-size: 2em;
+}
+header .contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+header a{
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color:rgb(246, 244, 248)
+}
+header a:hover{
+    color: rgb(255, 0, 0);
+}
+
+#encabezado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 500px;
+    background-image: url(imagenes/fondoMEX.jpg);
+    color: rgb(99, 250, 12);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.encabezado_principal{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 60px;
+    color:rgb(245, 28, 28)
+}
+.encabezado_secundario{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+}
+
+.texto_color{
+    color: rgb(4, 110, 13);
+}
+
+#quienes_somos .contenedor{
+    text-align: center;
+    padding: 20px 12px;
+}
+
+#programas{
+    background-color: rgb(96, 248, 82);
+    color: rgb(238, 241, 238);
+    text-align: center;
+}
+#programas .contenedor{
+    text-align: center;
+    padding: 100px 12px;
+}
+#programas p{
+    display: none;
+}
+#programas h2{
+    margin-top: 0;
+    font-size: 4em;
+}
+#programas .programa{
+
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 20px;
+    border-radius: 15px;
+}
+.programa:first-child{
+background-image:linear-gradient(
+    0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)
+)
+,url("imagenes/Muertos.jpg");
+}
+.programa:nth-child(2){
+background-image:linear-gradient(
+    0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)
+)
+,url("imagenes/Quince.jpg");
+}
+.programa:nth-child(3){
+background-image:linear-gradient(
+    0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)
+)
+,url("imagenes/Posada.jpg");
+}
+#caracteristicas .contenedor{
+    text-align: center;
+    padding: 100px 12px;
+}
+#caracteristicas li{
+    margin: 16px 0px;
+    font-weight: bold;
+
+}
+#mas_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(64, 226, 43);
+    color: rgb(243, 245, 243);
+    height: 80vh;
+}
+#mas_info h2{
+    font-size: 5vw;
+
+}
+#mas_info button{
+    font-size: 4vw;
+}
+footer p{
+    margin: 0px;
+    padding: 12px;
+    color: rgb(243, 250, 243);
+}
+footer .contenedor{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(96, 248, 82);
+}
+@media(min-width: 950px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+    header .contenedor{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0%;
+        padding-right: 20px;
+    }
+    #quienes_somos .contenedor{
+        display: flex;
+        justify-content: center;
+    }
+    #quienes_somos .contenedor_imagen{
+        background-image: url(imagenes/logo.jpg);
+        background-size: cover;
+        background-position: center center;
+        height: 400px;
+        width: 50%;
+
+    }
+    #quienes_somos .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #programas .grupo_programas{
+        display: flex;
+        justify-content: center;
+    }
+    #programas p{
+        display: block;
+        margin-bottom: 30px;
+    }
+    #programas .programa{
+        padding: 50px;
+        /*background-size: 100% 150px;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        background-color: rbg(50,50,50,50);*/
+        box-shadow: 3px 3px 10px rgba(115, 28, 165, 1.5);
+    }
+    #caracteristicas{
+        background-image: url(imagenes/logo2.jpg);
+        background-repeat: no-repeat;
+        background-size: 500px 400px;
+        background-position: calc(100vw - 500px);
+    }
+    #caracteristicas .contenedor{
+        text-align: initial;
+    }
+    #caracteristicas ul{
+        margin-left: 200px;
+    }
+    #caracteristicas li{
+        font-size: 30px;
+        margin: 0;
+    }
+    #mas_info h2{
+        font-size: 5em;
+    }
+    #mas_info button{
+        font-size: 2em;
+    }
+}
+
