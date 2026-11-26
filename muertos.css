@@ -1,0 +1,124 @@
+/* Colores de la fiesta:
+   naranja cempasúchil, morado, rosa mexicano, amarillo y noche */
+:root{
+    --naranja: #f57c00;
+    --amarillo: #ffc107;
+    --morado: #5b1a8a;
+    --rosa: #d81b78;
+    --noche: #1f1033;
+    --papel: #fff6e5;
+}
+
+body.muertos{
+    background-color: var(--papel);
+    color: var(--noche);
+}
+
+/* Menú (sobrescribe el verde de style.css) */
+.muertos header{ background-color: var(--morado); }
+.muertos .logo{ color: var(--amarillo); }
+.muertos header a{ color: var(--papel); }
+.muertos header a:hover{ color: var(--amarillo); }
+
+/* Botones */
+.muertos button{
+    color: var(--noche);
+    background-color: var(--amarillo);
+    border: 5px solid var(--naranja);
+    box-shadow: 3px 3px 10px var(--rosa);
+    cursor: pointer;
+}
+.muertos button:hover{
+    background-color: var(--rosa);
+    color: var(--papel);
+}
+
+/* Portada: pon tu imagen en imagenes/ y cambia el nombre aquí */
+.muertos #encabezado{
+    background-color: var(--noche);
+    background-image: url(imagenes/portada-muertos.jpg);
+    color: var(--amarillo);
+    padding: 90px 15px 0;
+}
+.muertos .encabezado_principal{ color: var(--naranja); }
+
+/* Secciones */
+.seccion .contenedor{
+    padding: 70px 15px;
+    text-align: center;
+}
+.seccion h2{ color: var(--morado); }
+.seccion h3{ color: var(--rosa); margin-top: 10px; }
+.fondo_oscuro{ background-color: var(--noche); color: var(--papel); }
+.fondo_oscuro h2{ color: var(--amarillo); }
+.fondo_oscuro h3{ color: var(--naranja); }
+
+.seccion ul{ text-align: left; font-size: 1.3em; line-height: 1.6; }
+.seccion li{ margin: 8px 0; }
+
+/* Espacios vacíos para tus imágenes */
+.espacio-imagen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    border: 3px dashed var(--naranja);
+    border-radius: 15px;
+    background-color: rgba(245, 124, 0, 0.12);
+    color: var(--morado);
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+.fondo_oscuro .espacio-imagen{ color: var(--amarillo); }
+
+/* Tarjetas */
+.grupo_tarjetas{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 30px 0;
+}
+.tarjeta{
+    flex: 1;
+    background-color: #fff;
+    color: var(--noche);
+    border-top: 8px solid var(--naranja);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 3px 3px 10px rgba(91, 26, 138, 0.35);
+}
+.tarjeta p{ font-size: 1.2em; }
+.tarjeta ul{ font-size: 1.1em; }
+.fondo_oscuro .tarjeta h3{ color: var(--rosa); }
+
+/* Muestras de color */
+.muestra{
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 3px solid var(--noche);
+}
+.c_naranja{ background: linear-gradient(90deg, var(--naranja) 50%, var(--amarillo) 50%); }
+.c_morado{ background: var(--morado); }
+.c_blanco{ background: #ffffff; }
+.c_rosa{ background: var(--rosa); }
+
+/* Pantallas grandes */
+@media(min-width: 950px){
+    .muertos #encabezado{ padding-top: 90px; } /* el menú es fijo */
+    .grupo_tarjetas{ flex-direction: row; flex-wrap: wrap; }
+    .grupo_tarjetas .tarjeta{ min-width: 220px; }
+    .dos_columnas{
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        text-align: left;
+    }
+    .dos_columnas .espacio-imagen,
+    .dos_columnas .texto{ width: 50%; }
+    .dos_columnas .espacio-imagen{ min-height: 400px; }
+    .seccion ul{ margin-left: 0; }
+}
